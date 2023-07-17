@@ -10,6 +10,8 @@ function Home() {
     <div className={cx("main-content-homepage")}>
       <div className={cx("container")}>
         <AccountItem />
+        <AccountItem />
+        <AccountItem />
       </div>
     </div>
   );
