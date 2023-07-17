@@ -1,0 +1,235 @@
+// Home
+.main-content-homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  max-width: 692px;
+}
+
+//Account item
+.list-item {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+// avata
+
+.img-avata {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+// content
+
+.content-container {
+  margin-left: 12px;
+}
+
+.header-content {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+// .info {
+// }
+
+.link-name {
+  .name {
+    margin-right: 4px;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .music-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+
+.btn-follow {
+  right: 0;
+  top: 8px;
+  position: absolute;
+}
+
+.list-item,
+.header-content,
+.video-wrapper {
+  display: flex;
+}
+
+.main-content {
+  max-width: 510px;
+  margin-right: 114px;
+}
+// .Text-content {
+// }
+// .span-text {
+// }
+// .common-link {
+// }
+// .text-link {
+// }
+
+.action-item {
+  width: 4.8rem;
+}
+
+// video
+
+.player-video {
+  position: relative;
+  background-color: rgba(22, 24, 35, 0.06);
+  &:hover {
+    .icons-interact-with-video {
+      display: inline-block;
+    }
+  }
+}
+
+// .video {
+// }
+
+.video-content {
+  height: auto;
+  max-width: 556px;
+}
+
+// icon-interact -with-video
+
+.icons-interact-with-video {
+  display: none;
+
+  .play-icon {
+    left: 12px;
+    position: absolute;
+    padding: 10px;
+    width: 2rem;
+    height: 2rem;
+    transition: opacity 0.3s;
+    color: rgb(255, 255, 255);
+    bottom: 26px;
+  }
+  .mute-iconvolume {
+    position: absolute;
+    height: 4rem;
+    padding: 8px;
+    bottom: 26px;
+    left: unset;
+    right: 12px;
+    color: rgb(255, 255, 255);
+  }
+  .video-control {
+    width: 100%;
+    height: 16px;
+    padding-inline: 12px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease 0s;
+    bottom: 12px;
+    cursor: initial;
+    display: flex;
+
+    .seekbar-container {
+      width: 100%;
+      height: 16px;
+      flex: 1 1 auto;
+      position: relative;
+      .seekbar-progress {
+        height: 2px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.34);
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      .seekbar-circle {
+        display: none;
+        width: 12px;
+        height: 12px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 12px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 1;
+      }
+      .see-bar {
+        height: 2px;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        transform-origin: left center;
+      }
+    }
+    .seekbar-time {
+      flex: 0 0 64px;
+      max-width: 64px;
+      margin-inline-start: 8px;
+      font-size: 10px;
+      line-height: 16px;
+      color: rgb(255, 255, 255);
+      text-align: end;
+      white-space: nowrap;
+    }
+  }
+
+  .report-text {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    right: 16px;
+    position: absolute;
+    top: 24px;
+    transition: opacity 0.3s;
+
+    .icon-falag {
+      padding-right: 4px;
+    }
+  }
+}
+
+//action-items
+
+.action-items {
+  display: flex;
+  flex-direction: column;
+
+  .btn-action-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+
+    .span-icon-wrapper {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all ease-in-out 200ms;
+      background-color: rgba(22, 24, 35, 0.06);
+      margin-top: 8px;
+      margin-bottom: 6px;
+      font-size: 24px;
+    }
+
+    .strong-text {
+      color: rgba(22, 24, 35, 0.75);
+      font-size: 1.2rem;
+      line-height: 17px;
+      text-align: center;
+    }
+  }
+}

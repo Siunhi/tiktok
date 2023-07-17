@@ -1,0 +1,119 @@
+.wrapper {
+  position: absolute;
+  width: 100%;
+  max-height: min((100vh - var(--height-heeader)), 734px);
+  min-height: 100px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+  border-radius: 8px;
+  padding-top: 8px;
+}
+
+//search
+
+.search {
+  width: 500px;
+  position: relative;
+  height: 46px;
+  padding: 12px 16px;
+  background-color: #f1f1f2;
+  border-radius: var(--search-boder-radius);
+  display: flex;
+  flex-direction: row;
+
+  input {
+    // flex: 1;
+    width: 431px;
+    color: #828282;
+    padding-right: 40px;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    line-height: 22px;
+  }
+
+  &:hover,
+  &:focus-within {
+    border: 1px solid rgba(22, 24, 35, 0.34);
+
+    .search-btn {
+      background: rgba(22, 24, 35, 0.06);
+
+      .search-icon {
+        color: rgb(22, 24, 35);
+      }
+    }
+  }
+
+  // close and loading
+
+  .close-btn,
+  .loading {
+    position: absolute;
+    right: 64px;
+    font-size: 14px;
+    color: rgba(22, 24, 35, 0.34);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.loading {
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: translateY(-50%) rotate();
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.close-btn {
+  border: none;
+}
+
+.spanSliter {
+  width: 1px;
+  height: 28px;
+  margin: -3px 0;
+  background: rgba(22, 24, 35, 0.12);
+}
+
+.search-btn {
+  border: none;
+  width: 52px;
+  height: 44px;
+  padding: 11px 16px 11px 12px;
+  margin: -12px -16px -12px 0;
+  border-top-right-radius: var(--search-boder-radius);
+  border-bottom-right-radius: var(--search-boder-radius);
+
+  &:hover {
+    background: rgba(22, 24, 35, 0.06);
+
+    .search-icon {
+      color: rgb(22, 24, 35);
+    }
+  }
+  .search-icon {
+    width: 24px;
+    height: 100%;
+    color: rgba(22, 24, 35, 0.34);
+  }
+}
+
+// Kết quả Search
+
+.search-result {
+  width: 500px;
+}
+
+.search-label {
+  color: rgba(22, 24, 35, 0.34);
+  font-weight: 600;
+  padding: 5px 12px;
+}
